@@ -84,7 +84,7 @@ async function run(){
             const options = {upsert: true};
             const updateDoc = {
               $set: {
-                status: "Apporved"
+                status: updatedItem.status
               }
             };
             const result= await userBookings.updateOne(filter, updateDoc, options);
